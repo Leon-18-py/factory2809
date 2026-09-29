@@ -2,8 +2,13 @@ import factory.*;
 
 public class Main {
     public static void main(String[] args){
-        Notificacao notificacao = new FactoryEmail().create();
+        Notificacao email = new FactoryEmail().create();
+        Notificacao push = new FactoryPush().create();
+        Notificacao sms = new FactorySMS().create();
 
-        notificacao.EnviarMensagem();
+
+        email.EnviarMensagem();
+        push.EnviarMensagem();
+        sms.EnviarMensagem();
     }
 }
